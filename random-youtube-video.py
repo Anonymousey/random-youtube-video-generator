@@ -7,17 +7,19 @@ DEVELOPER_KEY = 'YOUR_DEVELOPER_KEY'
 YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
 
-prefix = ['IMG ', 'IMG_', 'IMG-', 'DSC ']
-postfix = [' MOV', '.MOV', ' .MOV']
+prefix = ['live', 'webcam', 'test', 'stream']
 
 def youtube_search():
   youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
 
   search_response = youtube.search().list(
-    q=random.choice(prefix) + str(random.randint(999, 9999)) + random.choice(postfix),
+    q=random.choice(prefix),
     part='snippet',
-    maxResults=5
+    maxResults=5,
+    type='video',
+    eventType='live'
   ).execute()
+
 
   videos = []
 
