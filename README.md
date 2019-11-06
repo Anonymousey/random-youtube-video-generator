@@ -1,7 +1,7 @@
 # Random YouTube Video Generator (live)
-Supports live streams instead of videos.
-Random YouTube video generator script using YouTube Data API v3 written in Python. <br />
-Due to its query parameter this script fetches low viewed (0 - 250 views) YouTube video IDs oftenly. <br /><br />
+<p>Supports live streams instead of videos.</p>
+Random YouTube live stream generator script using YouTube Data API v3 written in Python. <br />
+
 **Default Search Query:** `Prefix ('live', 'webcam', 'test', 'stream')` <br /><br />
 You can change its parameter to whatever you want. <br />
 
